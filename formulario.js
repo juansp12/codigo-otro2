@@ -1,17 +1,17 @@
-var formulario = document.querySelector("#formulario")
+var formulario = document.querySelector("#formulario");
 
 formulario.onsubmit = function(e) {
 
   e.prevent();
   
-  
+  // Actualicé los nombres de las variables para mayor claridad.
   var nombre = formulario.elements["name"].value;
   var edad = formulario.elements["age"].value;
   var nacionalidadSelect = formulario.elements["nationality"];
   var nacionalidad = nacionalidadSelect.options[nacionalidadSelect.selectedIndex].value;
 
   console.log(nombre, edad, nacionalidad);
-
+// Validación para nombre y edad
    if (nombre.length === 0) {
     formulario.elements["name"].classList.add("error");
   }
